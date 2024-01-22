@@ -1,5 +1,7 @@
 package com.cazadordigital.mapstructlombokdemo.mapper;
 
+import java.util.List;
+
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -13,12 +15,16 @@ import com.cazadordigital.mapstructlombokdemo.entity.Product;
 public interface ProductMapper {
 
   @Mappings({
-      @Mapping(source = "creationDate", target = "creationDate", dateFormat = "yyyy-MM-dd HH-mm-ss")
+      @Mapping(source = "creationDate", target = "creationDate", dateFormat = "yyyy-MM-dd HH:mm:ss")
   })
 
-  GetProduct productToGetDTO(Product product);
+  GetProduct toGetDTO(Product product);
 
   @InheritInverseConfiguration
   Product toEntity(GetProduct getProduct);
+
+  List<GetProduct> toGetProductList(List<Product> productList);
+
+  List<Product> toEntityList(List<GetProduct> getProductList);
 
 }

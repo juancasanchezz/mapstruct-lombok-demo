@@ -34,7 +34,7 @@ public class GetProduct {
 
   @Override
   public String toString() {
-    return "{" +
+    return "GetProduct{" +
         " id='" + getId() + "'" +
         ", name='" + getName() + "'" +
         ", creationDate='" + getCreationDate() + "'" +
