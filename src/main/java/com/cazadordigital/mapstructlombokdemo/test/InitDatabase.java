@@ -32,9 +32,11 @@ public class InitDatabase {
 
       System.out.println("Get PRODUCTS");
       List<GetProduct> getProductList = productMapper.toGetProductList(products);
+      getProductList.forEach(System.out::println);
 
       System.out.println("MAPPED PRODUCTS");
       List<Product> mappedProducts = productMapper.toEntityList(getProductList);
+      mappedProducts.forEach((System.out::println));
 
     };
   }
