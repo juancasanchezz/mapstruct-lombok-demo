@@ -1,13 +1,7 @@
 package com.cazadordigital.mapstructlombokdemo.mapper;
 
 import java.util.List;
-
-import org.mapstruct.InheritInverseConfiguration;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.MappingConstants;
-import org.mapstruct.Mappings;
-
+import org.mapstruct.*;
 import com.cazadordigital.mapstructlombokdemo.dto.GetProduct;
 import com.cazadordigital.mapstructlombokdemo.entity.Product;
 
