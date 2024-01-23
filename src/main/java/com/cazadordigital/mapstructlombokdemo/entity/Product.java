@@ -3,6 +3,8 @@ package com.cazadordigital.mapstructlombokdemo.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,5 +28,9 @@ public class Product {
 
   @Column(name = "creation_date")
   private LocalDateTime creationDate;
+
+  @ManyToOne
+  @JoinColumn(name = "category_id")
+  private Category category;
 
 }

@@ -5,7 +5,7 @@ import org.mapstruct.*;
 import com.cazadordigital.mapstructlombokdemo.dto.GetProduct;
 import com.cazadordigital.mapstructlombokdemo.entity.Product;
 
-@Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, uses = { CategoryMapper.class })
 public interface ProductMapper {
 
   @Mappings({

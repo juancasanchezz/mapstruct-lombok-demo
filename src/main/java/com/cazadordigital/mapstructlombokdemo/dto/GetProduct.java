@@ -18,4 +18,6 @@ public class GetProduct {
 
   private String creationDate;
 
+  private GetCategory category;
+
 }
